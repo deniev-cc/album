@@ -3,8 +3,8 @@ import Indicator from "react-topbar-progress-indicator";
 
 Indicator.config({
     barColors: {
-        "0": "#000",
-        "1.0": "#000"
+        "0": "#46467c",
+        "1.0": "#46467c"
     },
     shadowBlur: 0
 });

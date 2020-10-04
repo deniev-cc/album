@@ -3,6 +3,7 @@ import Router from "./Router";
 import TopProgressBar from "./components/TopProgressBar";
 import { useGlobalContext } from "./context";
 import { isNull } from "lodash";
+import Header from "./components/Header";
 
 const App = () => {
     const { isAuth } = useGlobalContext();
@@ -12,13 +13,10 @@ const App = () => {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <Router isAuth={isAuth} />
-                </div>
-            </div>
-        </div>
+        <>
+            <Header />
+            <Router isAuth={isAuth} />
+        </>
     );
 };
 

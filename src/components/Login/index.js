@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import firebase from "../../firebase";
-import { useHistory } from "react-router-dom";
 import ErrorMessage from "../ErrorMessage";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
     const { push } = useHistory();
@@ -38,37 +38,39 @@ const Login = () => {
     };
 
     return (
-        <div className="row">
-            <div className="col-4 offset-4">
+        <div className="container">
+            <div className="row">
+                <div className="col-4 offset-4">
 
-                <ErrorMessage message={error} />
+                    <ErrorMessage message={error} />
 
-                <form onSubmit={submitHandler}>
-                    <div className="form-group">
-                        <input
-                            className="form-control"
-                            name="email"
-                            onChange={onChangeHandler}
-                            placeholder="Email"
-                            type="text"
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
-                            className="form-control"
-                            name="password"
-                            onChange={onChangeHandler}
-                            placeholder="Пароль"
-                            type="password"
-                        />
-                    </div>
-                    <button
-                        type="submit"
-                        className="btn btn-primary"
-                    >
-                        Войти
-                    </button>
-                </form>
+                    <form onSubmit={submitHandler}>
+                        <div className="form-group">
+                            <input
+                                className="form-control"
+                                name="email"
+                                onChange={onChangeHandler}
+                                placeholder="Email"
+                                type="text"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <input
+                                className="form-control"
+                                name="password"
+                                onChange={onChangeHandler}
+                                placeholder="Пароль"
+                                type="password"
+                            />
+                        </div>
+                        <button
+                            type="submit"
+                            className="btn btn-primary"
+                        >
+                            Войти
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     )
