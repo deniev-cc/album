@@ -12,10 +12,6 @@ const Provider = ({ children }) => {
     const [isAuth, setIsAuth] = useState(null);
 
     useEffect(() => {
-        //firebase.auth().signOut()
-
-
-
         firebase
             .auth()
             .onAuthStateChanged(user => {

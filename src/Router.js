@@ -1,8 +1,8 @@
-import React, {useEffect} from "react";
-import { Switch, Redirect } from "react-router-dom";
+import React from "react";
 import Route from "./components/Route";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import { Switch } from "react-router-dom";
 
 const Home = () => {
     return "Home"
